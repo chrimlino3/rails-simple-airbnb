@@ -1,0 +1,23 @@
+<h1>Simple Airbnb</h1>
+
+<h2>All our Flats</h2>
+
+<p>You searched for. We found 3 flats of our 3 in our website</p>
+
+
+<div class="row">
+  <div class="col-4">
+    <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="flat-card-content">
+        <% @flats.each do |flat| %>
+
+          <div class="card-body">
+          <h5 class="card-title">flat.name</h5>
+          <%= link_to flat.description, flat_path(flat) %>
+          <%= link_to flat.description, edit_flat_path(flat) %>
+          <%= link_to '<i class="fas fa-trash"></i>'.html_safe, flat_path(flat.id), method: :delete, data: { confirm: "Are you sure?" }%>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
