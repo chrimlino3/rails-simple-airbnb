@@ -13,8 +13,11 @@
 
           <div class="card-body">
           <h5 class="card-title">flat.name</h5>
-          <%= link_to flat.description, flat_path(flat) %>
-          <%= link_to flat.description, edit_flat_path(flat) %>
+          <%= link_to flat.name, flat_path(flat) %>
+          <%= flat.description%>
+          <%= flat.price_per_night%>
+          <%= flat.number_of_guests %>
+
           <%= link_to '<i class="fas fa-trash"></i>'.html_safe, flat_path(flat.id), method: :delete, data: { confirm: "Are you sure?" }%>
         </div>
       </div>
