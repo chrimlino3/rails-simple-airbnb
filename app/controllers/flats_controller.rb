@@ -8,6 +8,7 @@ class FlatsController < ApplicationController
   end
 
   def new
+    @flat = Flat.find(params[:id])
     @flat = Flat.new
   end
 end
